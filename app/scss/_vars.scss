@@ -1,0 +1,18 @@
+$main-color: #C9702F;
+$main-color-dark: #381B0B;
+$main-color-text-dark: #000000;
+
+$main-color-transparent-bg: #FCF0EA;
+
+
+:root {
+  --main-color: #{$main-color};
+  --main-color-dark: #{$main-color-dark};
+  --main-color-text-dark: #{$main-color-text-dark};
+  --main-color-transparent-bg: #{$main-color-transparent-bg};
+}
+
+%paragraph {
+  font-size: 18px;
+  line-height: 27px;
+}
