@@ -6,7 +6,6 @@
 
 .header {
   &-container {
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
     position: relative;
     z-index: 4;
   }
@@ -583,6 +582,11 @@
   }
 }
 @media only screen and (max-width: 1000px) {
+  .header-container {
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
+    position: relative;
+    z-index: 4;
+  }
 
   .mobile-bar {
     display: flex;
