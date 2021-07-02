@@ -4,16 +4,21 @@ $(function () {
     });
 
     if($(document).outerWidth() <= 1000) {
-        $('.main-menu li.has-sub-menu').on('click', function (e) {
-            e.preventDefault();
-            $(this).toggleClass('show');
 
-            if($(this).hasClass('show')) {
-                $(this).find('.sub-menu').slideDown(200);
+
+        $('.main-menu li.has-sub-menu > .main-menu__item-link').on('click', function (e) {
+            e.preventDefault();
+
+            let el = $(this).parent();
+            el.toggleClass('show');
+
+            if(el.hasClass('show')) {
+                el.find('.sub-menu').slideDown(200);
             }
             else {
-                $(this).find('.sub-menu').slideUp(200);
+                el.find('.sub-menu').slideUp(200);
             }
         });
+
     }
 })
