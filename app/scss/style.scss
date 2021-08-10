@@ -312,7 +312,35 @@
 }
 
 
-
+.btn-close {
+  cursor: pointer;
+}
+.modal {
+  &-content {
+    border-radius: 16px;
+  }
+  &-title {
+    font-size: 20px;
+  }
+}
+.modal-footer {
+  justify-content: center;
+  button#{&}__button {
+    padding: 10px 30px;
+  }
+}
+.form-check {
+  display: flex;
+  align-items: center;
+  &-input {
+   margin-right: 10px;
+  }
+}
+.modal-inform {
+  &__text {
+    text-align: center;
+  }
+}
 
 
 
@@ -448,6 +476,7 @@
     border-radius: 15px;
     padding: 6px;
     text-align: center;
+    border: none;
   }
   th {
     font-weight: normal;

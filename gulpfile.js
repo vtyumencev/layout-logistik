@@ -41,7 +41,9 @@ function images() {
 function scripts() {
   return src([
     'node_modules/jquery/dist/jquery.js',
-    'app/js/main.js'
+    'node_modules/jquery-mask-plugin/dist/jquery.mask.min.js',
+    'node_modules/bootstrap/dist/js/bootstrap.bundle.js',
+    'app/js/main.js',
   ])
     .pipe(concat('main.min.js'))
     .pipe(uglify())

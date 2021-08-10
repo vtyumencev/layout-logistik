@@ -29,10 +29,10 @@
           <img src="images/header-logo.png" alt="">
         </div>
         <div class="header__intro-flex header__button-wrapper header__intro-fill-out-wrapper">
-          <button class="header__button button">Заполнить заявку</button>
+          <button class="header__button button" type="button" data-bs-toggle="modal" data-bs-target="#modal-request">Заполнить заявку</button>
         </div>
         <div class="header__intro-flex header__button-wrapper header__intro-callback-wrapper">
-          <button class="header__button button button-white">Обратный звонок</button>
+          <button class="header__button button button-white" data-bs-toggle="modal" data-bs-target="#modal-request">Обратный звонок</button>
         </div>
         <div class="header__intro-flex header__contacts header-contacts">
           <div class="header-contacts__flex header-contacts__flex-blank-space"></div>
@@ -110,7 +110,7 @@
                 Сложно сказать, почему диаграммы связей неоднозначны и будут функционально разнесены на независимые элементы. Сложно сказать, почему стремящиеся вытеснить традиционное производство, нанотехнологии будут своевременно верифицированы.
               </div>
               <div class="main-banner__button-wrapper">
-                <button class="main-banner__button button">Заказать доставку</button>
+                <button class="main-banner__button button" data-bs-toggle="modal" data-bs-target="#modal-request">Заказать доставку</button>
               </div>
             </div>
           </div>
@@ -229,7 +229,7 @@
                 </div>
               </div>
               <div class="section-benefits__item section-benefits__item-request">
-                <button class="section-benefits__button button">Заказать услугу</button>
+                <button class="section-benefits__button button" data-bs-toggle="modal" data-bs-target="#modal-request">Заказать услугу</button>
               </div>
             </div>
           </div>
@@ -312,7 +312,50 @@
     </footer>
   </div>
 
+  <!-- Формы  -->
+  <div class="modal fade" id="modal-request" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Заявка ЛогистБизнес</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <form action="/ajax.php?action=form_request" class="ajax-form" method="POST">
+          <div class="modal-body">
+              <div class="mb-3">
+                <label for="modal-request-name" class="col-form-label">Имя:</label>
+                <input type="text" class="form-control" id="modal-request-name" name="name" required>
+              </div>
+              <div class="mb-3">
+                <label for="modal-request-phone" class="col-form-label">Телефон:</label>
+                <input type="tel" class="form-control" id="modal-request-phone" name="phone" required>
+              </div>
+              <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="modal-request-check" name="agree-policy" required checked>
+                <label class="form-check-label" for="modal-request-check">Я принимаю условия <a href="https://logistic-avto.ru/politika.html" target="_blank">Пользовательского соглашения</a></label>
+              </div>
+          </div>
+          <div class="modal-footer">
+            <button type="submit" class="modal-footer__button button">Отправить</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
 
+  <div class="modal fade modal-inform" id="modal-inform" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title"></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p class="modal-inform__text">Спасибо! Ваша заявка принята.</p>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <script src="js/main.min.js"></script>
 </body>
